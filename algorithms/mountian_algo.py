@@ -1,4 +1,4 @@
-def mountians(array):
+def mountians(array: list) -> bool:
     """
     To find the maximum index in an unsorted array.
     Then check if the array is sorted until maximum index
@@ -7,7 +7,7 @@ def mountians(array):
     :param array: list of integers
     :return: boolean value
     """
-    max_index = array.index(max(array))
+    max_index: int = array.index(max(array))
     if len(array) < 3:
         return False
     if max_index == 0 or max_index == len(array) - 1:
