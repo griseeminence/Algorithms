@@ -5,19 +5,19 @@ def decrypt(arr):
     :param arr: string with sequence of integers, characters and brackets.
     :return: decrypted string with sequence of characters (depends on multiplier) in sequence.
     """
-    stack: list = []
-    result: str = ""
-    multiplier: int = 0
+    stack = []
+    result = ''
+    multiplier = ''
 
     for char in arr:
-        if char.isdigit():
-            multiplier = multiplier * 10 + int(char)
+        if char.isdecimal():
+            multiplier += char
         elif char == '[':
             stack.append((result, multiplier))
-            result, multiplier = "", 0
+            result, multiplier = '', ''
         elif char == ']':
             prev_result, prev_multiplier = stack.pop()
-            result = prev_result + prev_multiplier * result
+            result = prev_result + int(prev_multiplier) * result
         else:
             result += char
 
