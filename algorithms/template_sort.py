@@ -22,6 +22,7 @@ def template_sort(arr: list[int], template: list[int]) -> str:
     result.extend(sorted(not_in_template))
     return ' '.join(map(str, result))
 
+
 if __name__ == "__main__":
     n = int(input())
     arr = list(map(int, input().split()))[:n]
