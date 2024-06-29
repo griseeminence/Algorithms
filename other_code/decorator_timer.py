@@ -3,7 +3,7 @@ import time
 
 def timer(func):
     """
-    Simple timer decorator.
+    Basic timer decorator.
     """
     def wrapper(*args, **kwargs):
         start = time.perf_counter()
