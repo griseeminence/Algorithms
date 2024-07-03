@@ -14,7 +14,7 @@ def timer(func):
 
     return wrapper
 
-
+#check
 @timer
 def example_multiplication_table(size: int) -> list:
     """
