@@ -19,3 +19,4 @@ def correct_bracket(value: str) -> bool:
 if __name__ == '__main__':
     value = input()
     print(correct_bracket(value))
+#check
