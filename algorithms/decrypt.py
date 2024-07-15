@@ -23,7 +23,7 @@ def decrypt(arr):
 
     return result
 
-
+#check
 if __name__ == '__main__':
     arr: str = input()
     print(decrypt(arr))
