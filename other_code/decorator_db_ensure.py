@@ -1,6 +1,6 @@
 import sqlite3
 
-
+#check
 def ensure_connection(func):
     """
     The decorator allows not to explicitly open a connection in each function.
