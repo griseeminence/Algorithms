@@ -14,3 +14,4 @@ if __name__ == '__main__':
     count = int(input())
     massive = [int(x) for x in input().split()][:count]
     print(duplicate(massive))
+#check
