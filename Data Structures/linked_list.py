@@ -26,10 +26,11 @@ class LinkedList:
         print("None")
 
 
-# Creating and filling a list
-llist = LinkedList()
-llist.append(1)
-llist.append(2)
-llist.append(3)
+if __name__ == '__main__':
+    # Creating and filling a list
+    llist = LinkedList()
+    llist.append(1)
+    llist.append(2)
+    llist.append(3)
 
-llist.print_list()
+    llist.print_list()
