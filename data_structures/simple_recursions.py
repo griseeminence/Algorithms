@@ -27,6 +27,19 @@ class Fibonacci:
             return Fibonacci.fib_recursive(data - 1) + Fibonacci.fib_recursive(data - 2)
 
     @staticmethod
+    def fib_recursive_0n(n):
+        # Linear Time - On
+        if n == 0:
+            return 0
+        elif n == 1:
+            return 1
+        fib = [0] * (n + 1)
+        fib[1] = 1
+        for i in range(2, n + 1):
+            fib[i] = fib[i - 1] + fib[i - 2]
+        return fib[n]
+
+    @staticmethod
     def fib_iterative(data):
         if data == 0:
             return 0
@@ -45,4 +58,5 @@ if __name__ == '__main__':
     print(Factorials.factorial_iterative(5))
     print('Fibonacci:')
     print(Fibonacci.fib_recursive(10))
+    print(Fibonacci.fib_recursive_0n(10))
     print(Fibonacci.fib_iterative(10))
