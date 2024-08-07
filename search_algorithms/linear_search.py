@@ -1,4 +1,6 @@
 class LinearSearch:
+    """Time complexity is O(n)"""
+
     def __init__(self, data):
         self.data = data
 
@@ -7,6 +9,8 @@ class LinearSearch:
             if self.data[i] == number:
                 return i
         return -1
+
+
 
 # Example
 if __name__ == '__main__':
