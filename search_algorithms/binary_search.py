@@ -1,4 +1,5 @@
 class BinarySearch:
+    """Time complexity is O(log'n) for both realisation"""
 
     def __init__(self, arr):
         self.arr = arr
