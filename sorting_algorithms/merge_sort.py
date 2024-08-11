@@ -35,6 +35,6 @@ class MergeSort:
 
 # Example
 if __name__ == "__main__":
-    arr = [12, 11, 13, 5, 6]
-    sorted_arr = MergeSort.sort(arr)
-    print("Sorted array:", sorted_arr)
+    array = [12, 11, 13, 5, 6]
+    sorted_array = MergeSort.sort(array)
+    print("Sorted array:", sorted_array)
