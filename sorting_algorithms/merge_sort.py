@@ -1,29 +1,40 @@
-def sort(arr):
-    """Time complexity is O(n(log'n))"""
-    if len(arr) > 1:
+class MergeSort:
+    """Time complexity is O(log'n)"""
+
+    @staticmethod
+    def sort(arr):
+        """Sorts the array using merge sort algorithm."""
+        if len(arr) <= 1:
+            return arr
+
         mid = len(arr) // 2
-        l = arr[:mid]
-        r = arr[mid:]
-        sort(l)
-        sort(r)
+        left_half = MergeSort.sort(arr[:mid])
+        right_half = MergeSort.sort(arr[mid:])
 
-        i = j = k = 0
+        return MergeSort.merge(left_half, right_half)
 
-        while i < len(l) and j < len(r):
-            if l[i] < r[j]:
-                arr[k] = l[i]
-                i += 1
+    @staticmethod
+    def merge(left, right):
+        """Merges two sorted arrays into one sorted array."""
+        sorted_array = []
+        left_index, right_index = 0, 0
+
+        while left_index < len(left) and right_index < len(right):
+            if left[left_index] < right[right_index]:
+                sorted_array.append(left[left_index])
+                left_index += 1
             else:
-                arr[k] = r[j]
-                j += 1
-            k += 1
+                sorted_array.append(right[right_index])
+                right_index += 1
 
-        while i < len(l):
-            arr[k] = l[j]
-            j += 1
-            k += 1
+        sorted_array.extend(left[left_index:])
+        sorted_array.extend(right[right_index:])
 
-        while j < len(r):
-            arr[k] = r[j]
-            j += 1
-            k += 1
+        return sorted_array
+
+
+# Example
+if __name__ == "__main__":
+    arr = [12, 11, 13, 5, 6]
+    sorted_arr = MergeSort.sort(arr)
+    print("Sorted array:", sorted_arr)
