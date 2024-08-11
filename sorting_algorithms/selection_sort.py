@@ -1,8 +1,9 @@
 class SelectionSort:
+    """Time complexity is O(n^2)"""
 
     @staticmethod
     def sort(arr):
-        """Time complexity is O(n^2)"""
+
         n = len(arr)
         for i in range(n):
             min_index = i

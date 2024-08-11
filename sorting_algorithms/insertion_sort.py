@@ -1,11 +1,12 @@
 class InsertionSort:
+    """
+    Best case: O(n) - when the array is already sorted.
+    Average and worst cases: O(n^2) - when the array is sorted in reverse order.
+    """
 
     @staticmethod
     def sort(arr):
-        """
-        Best case: O(n) - when the array is already sorted.
-        Average and worst cases: O(n^2) - when the array is sorted in reverse order.
-        """
+
         for i in range(1, len(arr)):
             key = arr[i]
             j = i - 1
