@@ -7,7 +7,7 @@ class Solution:
         lst.sort()
         i = 0
         first, last = lst[0], lst[-1]
-        while first[i] == last[i]:
+        while i < len(first) and i < len(last) and first[i] == last[i]:
             i += 1
         return first[:i]
 
