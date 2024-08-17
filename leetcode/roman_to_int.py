@@ -26,7 +26,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    # Example
+    # Examples
     example1 = 'III'
     example2 = 'LVIII'
     example3 = 'MCMXCIV'
