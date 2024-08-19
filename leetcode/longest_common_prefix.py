@@ -13,7 +13,7 @@ class Solution:
 
 
 if __name__ == "__main__":
-    # Example
+    # Example    # Example
     example = ["flower", "flow", "flight"]
     solution = Solution.longest_common_prefix(example)
     print(solution)
