@@ -16,6 +16,7 @@ class BubbleSort:
         return arr
 
 
-array = [64, 34, 25, 12, 22, 11, 90]
-sorted_array = BubbleSort.sort(array)
-print("Sorted array:", sorted_array)
+if __name__ == "__main__":
+    array = [64, 34, 25, 12, 22, 11, 90]
+    sorted_array = BubbleSort.sort(array)
+    print("Sorted array:", sorted_array)
