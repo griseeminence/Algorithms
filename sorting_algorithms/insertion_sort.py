@@ -14,7 +14,7 @@ class InsertionSort:
                 arr[j + 1] = arr[j]
                 j -= 1
             arr[j + 1] = key
-
+        return arr
 
 if __name__ == "__main__":
     array = [12, 11, 13, 5, 6]
